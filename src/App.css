@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: primaryFont;
+  src: url("./components/font/KumbhSans-Regular.ttf");
 }
+@font-face {
+  font-family: boldFont;
+  src: url("./components/font/KumbhSans-SemiBold.ttf");
+}
+*{
+  font-family: primaryFont;
+}
+.container{
+  width: 1300px;
+  margin: 0px auto;
+}
+.heading{
+  font-family: boldFont;
+}
+.image-gallery-play-button, .image-gallery-fullscreen-button, .image-gallery-left-nav, .image-gallery-right-nav{
+display: none!important;
+}
+.image-gallery-image{
+  height: 500px;
+}
+.image-gallery-thumbnail-image{
+  height: 100px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-gallery-thumbnails .image-gallery-thumbnails-container{
+  margin: 40px 0px 40px 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:focus{
+  margin:10px 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.image-gallery-thumbnail+.image-gallery-thumbnail{
+  margin:10px 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-gallery-thumbnail{
+  margin:10px 10px;
 }
+/* .image-gallery-thumbnail .image-gallery-thumbnail-image{
+  margin:10px 10px;
+} */
